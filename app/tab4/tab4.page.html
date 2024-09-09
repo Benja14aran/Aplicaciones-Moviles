@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="end" name="menu-outline" color="primary" size="large"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-row class="ion-align-items-center">
+      <ion-col size="auto">
+        <ion-img src="assets/logo.jpg" alt="Logo King School" class="logo-small"></ion-img>
+      </ion-col>
+      <ion-col size="auto" class="bold-italic-text">
+        Lista de Alumnos
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title class="bold-italic-text" size="large">Lista de Alumnos</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-list>
+    <ion-item *ngFor="let alumno of alumnos; let i = index">
+      <ion-label>
+        <h2 class="bold-italic-text">{{ alumno.nombre }}</h2>
+        <p class="bold-italic-text">Edad: {{ alumno.edad }}</p>
+        <p class="bold-italic-text">Curso: {{ alumno.curso }}</p>
+        <p class="bold-italic-text">Asistencia: {{ alumno.asistencia }}</p>
+        <p class="bold-italic-text">Reprobado: {{ alumno.reprobado }}</p>
+        <p class="bold-italic-text">Justificacion: {{ alumno.justificacion }}</p>
+      </ion-label>
+      <ion-button class="bold-italic-text" color="danger" (click)="eliminarAlumno(i)">
+        Eliminar
+      </ion-button>
+    </ion-item>
+  </ion-list>
+
+  <ion-text class="italic-text" *ngIf="alumnos.length === 0" color="medium">
+    No hay alumnos guardados.
+  </ion-text>
+</ion-content>

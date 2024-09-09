@@ -1,0 +1,65 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="end" name="menu-outline" color="primary" size="large"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-row class="ion-align-items-center">
+      <ion-col size="auto">
+        <ion-img src="assets/logo.jpg" alt="Logo King School" class="logo-small"></ion-img>
+      </ion-col>
+      <ion-col size="auto" class="bold-italic-text">
+        Perfil del Docente
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title class="bold-italic-text">Perfil del Docente</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content [fullscreen]="true" class="ion-padding">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title class="bold-italic-text">Información Personal</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label class="bold-italic-text" position="stacked">Nombre y Apellido</ion-label>
+          <ion-text class="italic-text">Chico Trujillo</ion-text>
+        </ion-item>
+        <ion-item>
+          <ion-label class="bold-italic-text" position="stacked">Fecha de Nacimiento</ion-label>
+          <ion-text class="italic-text">17 de septiembre de 2000</ion-text>
+        </ion-item>
+        <ion-item>
+          <ion-label class="bold-italic-text" position="stacked">Ciudad</ion-label>
+          <ion-text class="italic-text">Santiago, Chile</ion-text>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title class="bold-italic-text">Asignatura y Curso</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label class="bold-italic-text" position="stacked">Asignatura</ion-label>
+          <ion-text class="italic-text">Matemáticas</ion-text>
+        </ion-item>
+        <ion-item>
+          <ion-label class="bold-italic-text" position="stacked">Curso</ion-label>
+          <ion-text class="italic-text">1ro - 4to medio</ion-text>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  </ion-content>
+
+  <app-explore-container name="Tab 2 page"></app-explore-container>
+</ion-content>

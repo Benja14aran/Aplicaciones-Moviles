@@ -1,0 +1,23 @@
+<ion-app>
+
+  <ion-menu contentId="main" menuId="first" side="start" type="overlay">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-icon slot="start" name="school-outline" color="dark" size="large" style="padding-left: 15px;"></ion-icon>
+        <ion-title class="italic-text">King School</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+      <ion-menu-toggle *ngFor="let i of menu">
+        <ion-item [routerLink]="i.redirecTo" detail="true">
+          <ion-icon slot="start" [name]="i.icon" color="primary"></ion-icon>
+          <ion-label class="italic-text">{{i.name}}</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+
+    </ion-content>
+  </ion-menu>
+
+  <ion-router-outlet id="main"></ion-router-outlet>
+</ion-app>

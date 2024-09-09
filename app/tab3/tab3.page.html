@@ -1,0 +1,71 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="end" name="menu-outline" color="primary" size="large"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-row class="ion-align-items-center">
+      <ion-col size="auto">
+        <ion-img src="assets/logo.jpg" alt="Logo King School" class="logo-small"></ion-img>
+      </ion-col>
+      <ion-col size="auto" class="bold-italic-text">
+        Gestionar Alumnos
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title class="bold-italic-text" size="large">Gestionar Alumnos</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-list>
+    <ion-item>
+      <ion-input class="bold-italic-text" label="Nombre y Apellido:" labelPlacement="floating" [(ngModel)]="alumno.nombre" placeholder="Ingrese nombre y apellido"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input class="bold-italic-text" label="Edad:" labelPlacement="floating" type="number" [(ngModel)]="alumno.edad" placeholder="Ingrese la edad"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input class="bold-italic-text" label="Curso:" labelPlacement="floating" [(ngModel)]="alumno.curso" placeholder="Ingrese el curso"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input class="bold-italic-text" label="porcentaje de Asistencia:" labelPlacement="floating" type="number" [(ngModel)]="alumno.asistencia" placeholder="Ingrese porcentaje de asistencia"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input class="bold-italic-text" label="Justificacion:" labelPlacement="floating" [(ngModel)]="alumno.justificacion" placeholder="Ingrese la justificacion"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label class="bold-italic-text">¿Reprobado por Asistencia?</ion-label>
+      <ion-select class="bold-italic-text" [(ngModel)]="alumno.reprobado" placeholder="Seleccione">
+        <ion-select-option value="Sí">Sí</ion-select-option>
+        <ion-select-option value="No">No</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-button class="bold-italic-text" expand="full" (click)="guardarAlumno()">Guardar</ion-button>
+    <ion-button class="bold-italic-text" expand="full" color="medium" (click)="limpiarFormulario()">Limpiar</ion-button>
+
+    <ion-grid class="qr-center">
+      <ion-row class="ion-justify-content-center">
+        <ion-col size="6" class="ion-text-center">
+          <ion-img src="assets/qr1.jpg" alt="QR1" class="qr-img"></ion-img>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </ion-list>
+</ion-content>
+    
+  
+
+

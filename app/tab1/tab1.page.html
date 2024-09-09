@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="end" name="menu-outline" color="primary" size="large"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-row class="ion-align-items-center">
+      <ion-col size="auto">
+        <ion-img src="assets/logo.jpg" alt="Logo King School" class="logo-small"></ion-img>
+      </ion-col>
+      <ion-col size="auto" class="bold-italic-text">
+        Home
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title class="italic-text">Home</ion-title>
+    </ion-toolbar>  
+  </ion-header>
+
+  <ion-grid class="content-top">
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="12" class="ion-text-center">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title class="bold-italic-text">Bienvenido a King School</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p class="italic-text">King School fue fundado en 1865 con el objetivo de proporcionar educación de alta calidad y formar líderes del futuro. 
+              Con una larga tradición de excelencia académica, King School es un lugar donde los estudiantes se desarrollan en un entorno seguro y enriquecedor.</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid class="logo-center">
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="6" class="ion-text-center">
+        <ion-img src="assets/logo.jpg" alt="Logo King School" class="logo-img"></ion-img>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <app-explore-container name="Tab 1 page"></app-explore-container>
+</ion-content>

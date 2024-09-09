@@ -1,0 +1,50 @@
+
+:host {
+  display: block;
+  background-color: #000; 
+  height: 100vh; 
+  color: #fff; 
+}
+
+ion-content {
+  --background: #000;  
+  color: #fff;  
+}
+
+
+button {
+  background-color: #fff; 
+  color: #000;  
+}
+
+ion-label {
+  color: #fff;  
+}
+
+.logo-small {
+  max-width: 30px;
+  max-height: 30px;
+}
+
+p {
+  font-style: italic;
+}
+
+.italic-text {
+  font-style: italic;
+}
+
+.bold-italic-text {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.button-group {
+  margin-top: 20px;
+}
+
+.qr-img {
+  border: 2px solid #fff; 
+  border-radius: 10px; 
+}
+

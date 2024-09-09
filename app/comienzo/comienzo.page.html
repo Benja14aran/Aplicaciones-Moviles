@@ -1,0 +1,72 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="light">
+    <ion-row class="ion-align-items-center">
+      <ion-col size="auto">
+        <ion-img src="assets/logo.jpg" alt="Logo King School" class="logo-small"></ion-img>
+      </ion-col>
+      <ion-col size="auto" class="bold-italic-text">
+        Login
+      </ion-col >
+    </ion-row>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle class="italic-text">Mi cuenta</ion-card-subtitle>
+      <ion-card-title class="bold-italic-text">Login</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        <ion-input class="italic-text" label="Email:" labelPlacement="floating" type="email" name="email" [(ngModel)]="email" placeholder="Ingrese su Correo..." color="dark"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input class="italic-text" label="Contraseña:" labelPlacement="floating" type="pass" name="pass" [(ngModel)]="pass" placeholder="Ingrese su Contraseña..." color="dark"></ion-input>
+      </ion-item>
+    </ion-card-content>
+
+    <div style="text-align: center;">
+        <ion-button class="italic-text" (click)="login()" fill="solid" shape="round" color="primary" clas="boton">
+          Login
+        </ion-button>
+        <ion-button class="italic-text" [routerLink]="['/registro']" fill="solid" shape="round" color="primary" clas="boton">
+          Registre
+        </ion-button>
+    </div>
+
+    
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="light">
+    <ion-row class="ion-align-items-center" >
+      <ion-col size="auto">
+        <ion-img src="assets/logo.jpg" alt="Logo King School" class="logo-small"></ion-img>
+      </ion-col>
+      <ion-col size="auto" class="bold-italic-text">
+        King School
+      </ion-col>
+    </ion-row>
+    <ion-buttons slot="end">
+
+      <ion-button fill="clear">
+        <ion-icon name="logo-instagram" color="primary"></ion-icon>
+      </ion-button>
+
+      <ion-button fill="clear">
+        <ion-icon name="logo-facebook" color="primary"></ion-icon>
+      </ion-button>
+
+      <ion-button fill="clear">
+        <ion-icon name="logo-whatsapp" color="primary"></ion-icon>
+      </ion-button>
+
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-footer>

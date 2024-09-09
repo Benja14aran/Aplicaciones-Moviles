@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button 
+          defaultHref="/"
+          text=""
+          color="dark"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="bold-italic-text">Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle class="italic-text">Crea tu cuenta</ion-card-subtitle>
+      <ion-card-title class="bold-italic-text">Regístrate</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        <ion-input class="italic-text" label="Email:" labelPlacement="floating" type="email" name="email" [(ngModel)]="email" color="dark"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input class="italic-text" label="Contraseña:" labelPlacement="floating" type="pass" name="pass" [(ngModel)]="pass" color="dark"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input class="italic-text" label="Confirmar Contraseña:" labelPlacement="floating" type="confpass" name="confpass" [(ngModel)]="confpass" color="dark"></ion-input>
+      </ion-item>
+    </ion-card-content>
+
+    <div style="text-align: center;">
+        <ion-button class="italic-text" (click)="registre()" fill="solid" shape="round" color="primary" clas="boton">
+          Registre
+        </ion-button>
+    </div>
+
+    
+  </ion-card>
+</ion-content>
+
