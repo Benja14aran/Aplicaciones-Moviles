@@ -1,3 +1,5 @@
+Buenas noches profesora, en el CMD de entrega Experiencia 3 ahi un txt con los install igual
+
 Codigo para CMD
 json-server --watch almacen.json --host 0.0.0.0 --port 3000
 ionic server
